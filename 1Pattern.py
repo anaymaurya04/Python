@@ -91,3 +91,37 @@ for i in range(n):
         print(count, end=" ")
         count+=1
     print()
+
+print()
+
+char=65
+for i in range(n):
+    for j in range(i + 1):
+        print(chr(char+j), end="")
+    print()
+
+print()
+char=65
+for i in range(n,0,-1):
+    for j in range(0,i):
+        print(chr(char+j), end="")
+    print()
+
+for i in range(n):
+    for j in range(n-i-1):
+        print(" ", end="")
+    for j in range(i+1):
+        print(chr(char+j),end="")
+    for j in range(i):
+        print(chr(char + i - j - 1), end="")
+    for j in range(n-i-1):
+        print(" ", end="")
+    print()
+
+print()
+
+char=65
+for i in range(n):
+    for j in range(char + n - 1 - i, char + n):
+        print(chr(j),end="")
+    print()
