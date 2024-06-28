@@ -26,4 +26,12 @@ def reverse(x):
         rev=rev*sign
         return rev
 
-print(reverse(2101))
+
+def divisor(x):
+    sum = 0
+    for i in range(1, x + 1):
+        if x % i == 0:
+            sum += i
+    return sum
+
+print(divisor(32))
