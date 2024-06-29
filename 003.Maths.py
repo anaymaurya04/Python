@@ -34,4 +34,3 @@ def divisor(x):
             sum += i
     return sum
 
-print(divisor(32))
