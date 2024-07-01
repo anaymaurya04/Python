@@ -34,3 +34,26 @@ def divisor(x):
             sum += i
     return sum
 
+
+def print_numbers(n, current=1):
+    if current > n:
+        return
+    print(current)
+    print_numbers(n, current + 1)
+
+
+n=10
+def Nto1(n):
+    print(n)
+    if n>0:
+        n=n-1
+        Nto1(n)
+
+print(Nto1(n))
+
+# class Solution:
+#     def printNos(self, n):
+#         print(n)
+#         if n>0:
+#             n=n-1
+#             printNos(self,n)
