@@ -42,3 +42,15 @@ def reverseArray(arr,n):
     for i in range(n-1,-1,-1):
         ans[n-i-1]=arr[i]
     printArr(ans,n)
+
+def checkpalindrome(s):
+    for i in range(len(s)):
+        ans = [0]*len(s)
+        for i in range(len(s)-1,-1,-1):
+            ans[len(s)-i-1]=s[i]
+            if ans == s:
+                return True
+            else:
+                return False
+s="gig"            
+print(checkpalindrome(s))
