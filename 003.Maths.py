@@ -35,36 +35,3 @@ def divisor(x):
     return sum
 
 
-def print_numbers(n, current=1):
-    if current > n:
-        return
-    print(current)
-    print_numbers(n, current + 1)
-
-
-n=10
-def Nto1(n):
-    print(n)
-    if n>0:
-        n=n-1
-        Nto1(n)
-
-
-# class Solution:
-#     def printNos(self, n):
-#         print(n)
-#         if n>0:
-#             n=n-1
-#             printNos(self,n)
-
-def factorialNumbers( n):
-    result = []
-    factorial = 1
-    for i in range(1, n + 1):
-        factorial *= i
-        if (factorial > n):
-            break
-        else:
-            result.append(factorial)
-    return result
-
