@@ -1,3 +1,6 @@
+import re
+
+
 def print_numbers(n, current=1):
     if current > n:
         return
@@ -43,14 +46,12 @@ def reverseArray(arr,n):
         ans[n-i-1]=arr[i]
     printArr(ans,n)
 
-def checkpalindrome(s):
-    for i in range(len(s)):
-        ans = [0]*len(s)
-        for i in range(len(s)-1,-1,-1):
-            ans[len(s)-i-1]=s[i]
-            if ans == s:
-                return True
-            else:
-                return False
-s="gig"            
-print(checkpalindrome(s))
+
+def check_palindrome(s):
+    cleaned_s = re.sub(r'[^A-Za-z0-9]', '', s).lower()
+    reversed_s = cleaned_s[::-1]
+    return cleaned_s == reversed_s
+print(check_palindrome("A man, a plan, a canal: Panama")) 
+print(check_palindrome("racecar"))  
+print(check_palindrome("hello"))    
+
