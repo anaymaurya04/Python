@@ -51,7 +51,12 @@ def check_palindrome(s):
     cleaned_s = re.sub(r'[^A-Za-z0-9]', '', s).lower()
     reversed_s = cleaned_s[::-1]
     return cleaned_s == reversed_s
-print(check_palindrome("A man, a plan, a canal: Panama")) 
-print(check_palindrome("racecar"))  
-print(check_palindrome("hello"))    
 
+def fibonacci(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+print(fibonacci(3))
