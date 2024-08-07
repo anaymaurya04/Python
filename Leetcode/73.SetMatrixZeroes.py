@@ -21,4 +21,4 @@ def setMatrixZeros(matrix):
             matrix[i] = 0
     if rowZero is True:
         for j in range(col):
-            matrix[0][j] = 0
+            matrix[j] = 0
